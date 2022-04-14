@@ -3,7 +3,7 @@ import cosas.*
 
 test "Luisa" {
 
-	luisa.jugadorActivo(mario)
+	luisa.jugadorActivo(floki)
 	luisa.jugadorActivo().encontrarElemento(aurora)
 	luisa.jugadorActivo().encontrarElemento(castillo)
     
