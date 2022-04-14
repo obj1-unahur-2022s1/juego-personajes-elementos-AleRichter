@@ -1,0 +1,11 @@
+import jugadoresPersonajes.*
+import cosas.*
+
+test "Luisa" {
+
+	luisa.jugadorActivo(mario)
+	luisa.jugadorActivo().encontrarElemento(aurora)
+	luisa.jugadorActivo().encontrarElemento(castillo)
+    
+    assert.equals(45, mario.valorRecolectado())
+}
