@@ -3,9 +3,10 @@ import cosas.*
 
 test "Luisa" {
 
-	luisa.jugadorActivo(floki)
+	luisa.jugadorActivo(mario)
 	luisa.jugadorActivo().encontrarElemento(aurora)
 	luisa.jugadorActivo().encontrarElemento(castillo)
-    
+	
     assert.equals(45, mario.valorRecolectado())
+    
 }

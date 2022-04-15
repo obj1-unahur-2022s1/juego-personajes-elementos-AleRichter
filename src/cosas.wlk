@@ -1,5 +1,3 @@
-import armas.*
-
 object castillo {
 	var nivelDeDefensa = 150
 	

@@ -9,6 +9,10 @@ object luisa {
 	}
 	
 	method jugadorActivo() = jugadorActivo 
+	
+	method aparece(elemento) {
+		return self.jugadorActivo().encontrarElemento(elemento)
+	} 
 }
 
 
@@ -33,6 +37,8 @@ object mario {
 	var ultimoElementoEncontrado 
 	
 	method valorRecolectado() = valorRecolectado 
+	
+	method ultimoElementoEncontrado() = ultimoElementoEncontrado
 	
 	method encontrarElemento(elemento){
 		ultimoElementoEncontrado  = elemento 
