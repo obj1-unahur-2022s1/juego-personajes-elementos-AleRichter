@@ -1,9 +1,14 @@
 object ballesta {
 	var flechas = 10
+	
 	method nivelDePotencia() = 4
 	
     method estaCargada() = flechas >= 1
     
+    method flechas(){
+    	return flechas 
+    }
+        
     method usar(){
     	flechas -= 1
     }

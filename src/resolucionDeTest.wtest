@@ -1,0 +1,52 @@
+import jugadoresPersonajes.*
+import cosas.*
+import armas.*
+
+test "1° Test" {
+	
+	luisa.jugadorActivo(mario)
+	luisa.jugadorActivo().encontrarElemento(aurora)
+	luisa.jugadorActivo().encontrarElemento(castillo)
+	
+	assert.that(mario.estaFeliz())
+	assert.that(mario.ultimoElementoEncontrado() == castillo)
+    assert.equals(20, mario.ultimoElementoEncontrado().altura())
+    assert.equals(170, castillo.nivelDefensa())
+    assert.equals(45, mario.valorRecolectado())
+
+}
+
+
+test "2° Test" {
+	
+	floki.cambiarArma(jabalina)
+	luisa.jugadorActivo(mario)
+	luisa.jugadorActivo().encontrarElemento(tipa)
+	luisa.jugadorActivo(floki)
+	luisa.jugadorActivo().encontrarElemento(aurora)
+	luisa.jugadorActivo().encontrarElemento(castillo)	
+	
+    assert.equals(16, mario.valorRecolectado())	
+    assert.equals(9, tipa.altura())	 
+	assert.notThat(mario.estaFeliz())
+	assert.notThat(aurora.estaViva())
+    assert.equals(150, castillo.nivelDefensa())
+	assert.notThat(jabalina.estaCargada())    
+
+}
+
+
+
+test "3° Test" {
+	
+	floki.cambiarArma(ballesta) 
+	luisa.jugadorActivo(floki)	
+	luisa.jugadorActivo().encontrarElemento(aurora)
+	luisa.jugadorActivo().encontrarElemento(castillo)	
+	
+    assert.equals(0, mario.valorRecolectado())		
+	assert.that(aurora.estaViva())	
+    assert.equals(146, castillo.nivelDefensa())		
+	assert.that(ballesta.estaCargada())	
+   	assert.equals(8, ballesta.flechas())
+}
